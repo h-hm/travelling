@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="recommend-title">热销推荐</div>
+    <div class="recommend-title">热点推荐</div>
     <ul>
-        <li class="item border-bottom" v-for="item in recommendsList" :key="item.id">
+        <li class="item border-bottom" v-for="item in list" :key="item.id">
             <img class="item-img" :src="item.imgUrl" />
             <div class="item-info">
                 <p class="item-title">{{ item.title }}</p>
@@ -16,32 +16,8 @@
 <script>
 export default {
     name: 'HomeRecommend',
-    data () {
-        return{
-            recommendsList:[{
-            id:'01',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/1610/83/83a873f755d64992a3.water.jpg_200x200_f7acbacd.jpg',
-            title:'游南昌',
-            desc:'南昌融创主题乐园（原万达主题乐园）'
-        },{
-            id:'02',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/1610/83/83a873f755d64992a3.water.jpg_200x200_f7acbacd.jpg',
-            title:'游南昌',
-            desc:'南昌融创主题乐园（原万达主题乐园）'
-        },
-        {
-            id:'03',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/1610/83/83a873f755d64992a3.water.jpg_200x200_f7acbacd.jpg',
-            title:'游南昌',
-            desc:'南昌融创主题乐园（原万达主题乐园）'
-        },
-        {
-            id:'04',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/1610/83/83a873f755d64992a3.water.jpg_200x200_f7acbacd.jpg',
-            title:'游南昌',
-            desc:'南昌融创主题乐园（原万达主题乐园）'
-        }]
-        }
+    props:{
+        list:Array
     }
 }
 </script>
@@ -50,7 +26,7 @@ export default {
     .recommend-title{
         margin-top:.2rem;
         line-height: .8rem;
-        background:#eee;
+        background:#f2f2f2;
         text-indent:.2rem;
     }
     .item{
