@@ -4,13 +4,13 @@
            <div class="iconfont back-icon">&#xe624;</div>
        </div>
        <div class="header-input">
-           <span class="iconfont">&#xe632;</span>
+           <div class="iconfont">&#xe632;</div>
            输入城市/景点/游玩主题
         </div>
        <router-link to="/city">
        <div class="header-right">
            {{ this.city }}
-           <sapn class="iconfont arrow-icon">&#xe64a;</sapn>
+           <div class="iconfont arrow-icon">&#xe64a;</div>
        </div>
        </router-link>
     </div>
