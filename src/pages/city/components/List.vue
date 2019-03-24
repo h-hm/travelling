@@ -22,7 +22,11 @@
                 </div>
             </div>
         </div>
-         <div class="area" v-for="(item,index) in cities" :key="index">
+         <div class="area" 
+            v-for="(item,index) in cities" 
+            :key="index"
+            :ref="index"
+            >
             <div class="title border-topbottom">{{index}}</div>
             <div class="item-list" v-for="innerItem in item" :key="innerItem.id">
                 <div class="item border-bottom">{{ innerItem.name }}</div>
@@ -37,10 +41,21 @@ export default {
     name: 'cityList',
     props:{
         hot:Array,
-        cities:Object
+        cities:Object,
+        letter: String
     },
-    mounted(){
+    mounted () {
         this.scroll = new Bscroll(this.$refs.wrapper);
+    },
+    watch: {
+        // 监听letter的变化
+        letter () {
+            if (this.letter) {
+               const element = this.$refs[this.letter][0];
+               this.scroll.scrollToElement(element)
+            }
+            //console.log(this.letter);
+        }
     }
 }
 </script>
