@@ -8,7 +8,11 @@
          v-show="keyworld"
          >
         <ul>
-            <li class="search-item border-bottom" v-for="item in list" :key="item.id">{{ item.name }}</li>
+            <li class="search-item border-bottom" 
+            v-for="item in list" 
+            :key="item.id"
+            @click="handleCityClick(item.name)"
+            >{{ item.name }}</li>
             <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
         </ul>
     </div>
@@ -16,6 +20,7 @@
 </template>
 <script>
 import Bscroll from 'better-scroll'
+import { mapMutations } from 'vuex';
 export default {
     name: 'CitySearch',
     props: {
@@ -23,10 +28,19 @@ export default {
     },
     data () {
         return {
-            keyworld:'',
-            list:[],
+            keyworld: '',
+            list: [],
             timer: null
         }
+    },
+    methods: {
+       handleCityClick (city) {
+         //this.$store.commit('changeCity',city);
+         this.changeCity(city);
+        //  用js实现页面路由的跳转
+         this.$router.push('/');
+        },
+        ...mapMutations(['changeCity'])
     },
     computed: {
         hasNoData () {
@@ -35,10 +49,10 @@ export default {
     },
     watch: {
        keyworld () {
-          if(this.timer) {
+          if (this.timer) {
               clearTimeout(this.timer);
           }
-          if(!this.keyworld){
+          if (!this.keyworld) {
               this.list = [];
               return;
           }

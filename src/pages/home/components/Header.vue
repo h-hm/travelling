@@ -16,10 +16,12 @@
     </div>
 </template>
 <script>
+import { mapState } from 'vuex';
 export default {
     name: 'HomeHeader',
-    props:{
-        city : String
+    computed: {
+        // 映射this.$store.state.city 为this.city 
+        ...mapState(['city'])
     }
 }
 </script>
@@ -51,7 +53,8 @@ export default {
            color: #ccc;
        }
        .header-right{
-           width: 1.24rem;
+           min-width: 1.04rem;
+           padding:0 .1rem;
            float: right;
            color:#fff;
            text-align: center;

@@ -37,9 +37,10 @@ export default {
      }
   },
   methods:{
+      //向父组件触发事件   
       handleLetterClick (e) {
         this.$emit('change',e.target.innerText)
-        console.log(e.target.innerText);
+        //console.log(e.target.innerText);  A...
       },
       handleTouchStart () {
         this.touchStatus = true;

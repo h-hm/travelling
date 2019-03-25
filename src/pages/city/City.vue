@@ -46,6 +46,7 @@ export default {
                 this.hotCities = data.hotCities;
             }
         },
+        // 接收子组件传递过来的值
         handleLetterChange (letter) {
             this.letter = letter;
             //console.log(letter);
