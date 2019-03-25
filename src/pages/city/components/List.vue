@@ -49,7 +49,7 @@ export default {
         letter: String
     },
     computed: {
-        // 展开运算符 映射
+        // 展开运算符 映射  this.$store.city
         ...mapState(['city'])
     },
     methods: {

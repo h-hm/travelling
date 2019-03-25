@@ -70,7 +70,7 @@ export default {
           }, 100);
        } 
     },
-    mounted (){
+    mounted () {
        this.scroll = new Bscroll(this.$refs.search);
     }
 }
