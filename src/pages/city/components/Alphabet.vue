@@ -14,10 +14,10 @@
 <script>
 export default {
   name: 'CityAlphabet',
-  props:{
+  props: {
       cities:Object
   },
-  data() {
+  data () {
       return {
            touchStatus:false,
            startY:0,
@@ -28,7 +28,7 @@ export default {
     this.startY =  this.$refs['A'][0].offsetTop;
   },
   computed: {
-     letters() {
+     letters () {
          const letters = [];
          for ( let i in this.cities){
              letters.push(i);

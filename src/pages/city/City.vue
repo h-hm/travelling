@@ -27,7 +27,7 @@ export default {
         cityList,
         CityAlphabet
     },
-    data (){
+    data () {
         return{
             cities: {},
             hotCities: [],

@@ -17,7 +17,7 @@
     </div>
 </template>
 <script>
-import CommonGallary from 'common/gallary/Gallary.vue';
+import CommonGallary from 'common/gallary/Gallary.vue'
 export default {
     name: 'DetailBanner',
     data () {

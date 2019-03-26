@@ -38,10 +38,10 @@ export default {
        ...mapState(['city'])
     },
     methods:{
-        getHomeInfo(){
+        getHomeInfo () {
             axios.get('/api/index.json?city=' + this.city ).then(this.getHomeInfoSucc)
         },
-        getHomeInfoSucc(res){
+        getHomeInfoSucc (res) {
            res = res.data;
            if(res.ret && res.data) {
               const data  = res.data;

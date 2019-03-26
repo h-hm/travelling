@@ -40,12 +40,12 @@
 </template>
 <script>
 import Bscroll from 'better-scroll'
-import {mapState,mapMutations} from 'vuex';
+import {mapState,mapMutations} from 'vuex'
 export default {
     name: 'cityList',
-    props:{
-        hot:Array,
-        cities:Object,
+    props: {
+        hot: Array,
+        cities: Object,
         letter: String
     },
     computed: {

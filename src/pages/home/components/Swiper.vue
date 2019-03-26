@@ -22,7 +22,7 @@ export default {
             }
        }
     },
-    computed:{
+    computed: {
         showSwiper () {
             return this.list.length
         }
