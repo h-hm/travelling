@@ -42,6 +42,10 @@ export default {
  },
  activated () {
      window.addEventListener ('scroll', this.handleScorll);
+ },
+ deactivated () {
+    //  当页面隐藏的时候对全局事件解绑
+     window.removeEventListener ('scroll', this.handleScorll);
  }    
 }
 </script>
@@ -63,6 +67,7 @@ export default {
         }
    } 
    .header-fixed{
+       z-index: 2 
        position: fixed;
        overflow: hidden;
        top:0;
