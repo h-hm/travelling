@@ -27,6 +27,7 @@ export default {
  },
  methods: {
      handleScorll () {
+        console.log('111')
         const top = document.documentElement.scrollTop;
         if ( top > 60 && top <140 ) {
             this.showAbs = false;

@@ -15,7 +15,8 @@
 export default {
   name: 'DetailList',
   props: {
-      list: Array
+      list: Array,
+      sightName: String
   }   
 }
 </script>
