@@ -7,7 +7,7 @@
       ></detail-banner>
       <detail-header></detail-header>
       <div class="content">
-          <detail-list :list="list"></detail-list>
+          <detail-list :categoryList="categoryList"></detail-list>
       </div>
     </div>
 </template>
@@ -28,7 +28,7 @@ export default {
             sightName: '',
             bannerImg: '',
             gallaryImgs: [],
-            list: []
+            categoryList: []
         }
     },
     methods :{
@@ -43,7 +43,7 @@ export default {
               this.sightName = data.sightName;
               this.bannerImg = data.bannerImg;
               this.gallaryImgs = data.gallaryImgs;
-              this.list = data.categoryList;
+              this.categoryList = data.categoryList;
           }
        }
     },

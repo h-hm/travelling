@@ -28,7 +28,7 @@ export default {
  methods: {
      handleScorll () {
         console.log('111')
-        const top = document.documentElement.scrollTop;
+        const top =document.documentElement.scrollTop;
         if ( top > 60 && top <140 ) {
             this.showAbs = false;
             let opacity = top/140;
@@ -42,7 +42,10 @@ export default {
      }
  },
  activated () {
-     window.addEventListener ('scroll', this.handleScorll);
+     window.addEventListener ('scroll', this.handleScorll,true);
+    //  this.$refs.scroll.addEventListener('scroll',()=>{
+    //     this.handleScorll()
+    // },true)
  },
  deactivated () {
     //  当页面隐藏的时候对全局事件解绑
