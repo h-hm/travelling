@@ -3,9 +3,9 @@
        <div class="header-left">
            <div class="iconfont back-icon">&#xe624;</div>
        </div>
-       <div class="header-input">
+       <div class="header-input" >
            <div class="iconfont">&#xe632;</div>
-           输入城市/景点/游玩主题
+           <div class="text">输入城市/景点/游玩主题</div> 
         </div>
        <router-link to="/city">
        <div class="header-right">
@@ -28,7 +28,7 @@ export default {
 
 <style lang="stylus" scoped>
    @import '~styles/varibles.styl'
-   .header{
+  .header{
        display:flex;
        line-height: .86rem;
        background :$bgColor;
@@ -51,6 +51,12 @@ export default {
            height: .64rem;
            line-height: .64rem;
            color: #ccc;
+           .iconfont{
+               display:inline-block;
+           }
+           .text{
+               display:inline-block;
+           }
        }
        .header-right{
            min-width: 1.04rem;
@@ -59,6 +65,7 @@ export default {
            color:#fff;
            text-align: center;
            .arrow-icon{
+               float:right;
                margin-left: .1rem;
                font-size: .24rem;
            }

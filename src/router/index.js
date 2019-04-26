@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+//@默认是从 src 目录开始查找，在webpack.dev.conf.js里面的 alias 去设置。 也可以自己配置一些其它路径或者符号
 //import Home from '@/pages/home/Home.vue'
 //import City from '@/pages/city/City.vue'
 //import Detail from '@/pages/detail/Detail.vue'
