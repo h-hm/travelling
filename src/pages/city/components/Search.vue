@@ -40,7 +40,7 @@ export default {
         //  用js实现页面路由的跳转
          this.$router.push('/');
         },
-        ...mapMutations(['changeCity'])
+        //...mapMutations(['changeCity'])
     },
     computed: {
         hasNoData () {

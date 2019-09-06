@@ -38,25 +38,24 @@ export default {
         getCityInfo(){
             axios.get('/api/city.json').then(this.handleGetCityInfoSucc)
         },
-        handleGetCityInfoSucc(res){
+        handleGetCityInfoSucc(res) {
             res = res.data;
-            if(res.ret && res.data){
+            if (res.ret && res.data) {
                 const data = res.data;
                 this.cities = data.cities;
                 this.hotCities = data.hotCities;
             }
         },
         // 接收子组件传递过来的值
-        handleLetterChange (letter) {
+        handleLetterChange(letter) {
             this.letter = letter;
             //console.log(letter);
         }
     },
-    mounted () {
+    mounted() {
         this.getCityInfo()
     }
 }
 </script>
 <style lang="stylus" scoped>
-
 </style>

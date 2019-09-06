@@ -14,7 +14,7 @@ export default {
     props: {
       list: Array
     },
-    data () {
+    data() {
        return{
             swiperOption: {
                  pagination: '.swiper-pagination',
@@ -25,7 +25,7 @@ export default {
        }
     },
     computed: {
-        showSwiper () {
+        showSwiper() {
             return this.list.length
         }
     }

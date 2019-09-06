@@ -41,13 +41,13 @@ export default {
         }
      }
  },
- activated () {
+ activated() {
      window.addEventListener ('scroll', this.handleScorll,true);
     //  this.$refs.scroll.addEventListener('scroll',()=>{
     //     this.handleScorll()
     // },true)
  },
- deactivated () {
+ deactivated() {
     //  当页面隐藏的时候对全局事件解绑
      window.removeEventListener ('scroll', this.handleScorll);
  }    
